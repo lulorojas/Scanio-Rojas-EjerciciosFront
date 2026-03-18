@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio D - Formulario de Contacto</title>
+    <link rel="stylesheet" href="html2ejerciciod.css">
+</head>
+<body>
+
+    <div class="card">
+        <h1>Formulario de Contacto</h1>
+
+        <form>
+            <!-- Nombre -->
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" maxlength="30" placeholder="Tu nombre (máx. 30 caracteres)">
+
+            <!-- Apellido -->
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" maxlength="30" placeholder="Tu apellido (máx. 30 caracteres)">
+
+            <!-- Email -->
+            <label for="email">Email <span style="color:#e74c3c;">*</span></label>
+            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+
+            <!-- Asunto -->
+            <label for="asunto">Asunto</label>
+            <select id="asunto" name="asunto">
+                <option value="" disabled selected>Seleccioná una opción</option>
+                <option value="presupuesto">Pedir presupuesto</option>
+                <option value="cita">Solicitar cita previa</option>
+                <option value="otros">Otros</option>
+            </select>
+
+            <!-- Cómo nos conoció -->
+            <label>¿Cómo nos ha escogido?</label>
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox" name="como" value="amigo"> Un amigo
+                </label>
+                <label>
+                    <input type="checkbox" name="como" value="google"> Googleando
+                </label>
+                <label>
+                    <input type="checkbox" name="como" value="redes"> Redes sociales
+                </label>
+                <label>
+                    <input type="checkbox" name="como" value="otros"> Otros
+                </label>
+            </div>
+
+            <!-- Mensaje -->
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" maxlength="300" placeholder="Escribí tu mensaje (máx. 300 caracteres)"></textarea>
+            <p class="char-hint">Máximo 300 caracteres.</p>
+
+            <!-- Términos y condiciones -->
+            <label class="terminos-label">
+                <input type="checkbox" name="terminos" required>
+                Acepto los <a href="#" style="color:#3498db;">términos y condiciones</a>. (Obligatorio)
+            </label>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+</body>
+</html>
