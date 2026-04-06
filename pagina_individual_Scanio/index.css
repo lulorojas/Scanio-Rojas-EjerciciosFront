@@ -11,7 +11,7 @@ body {
 
 .header {
     display: flex;
-    gap: 20em;    
+    gap: 30em;    
     align-items: center;
     background-color: #ffffff; 
     padding: 15px 50px;
