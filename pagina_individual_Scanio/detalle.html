@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Auto</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+<header class="header"> 
+<div class="div-logo">
+    <img src="imagenes/header/logo.png" alt="logo" class="logo">
+</div>
+<nav class="navbar">
+    <ul class="links">
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="index.html#catalogo">Catalogo</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+</nav>
+<img src="imagenes/header/hamburguesa.png" alt="" class="hamburguesa-img">
+</header>
+
+<main>
+    <div class="divvolver">
+        <a href="index.html">Volver</a>
+    </div>
+
+    <div class="contenedordetalle">
+        <div class="fotogrande">
+            <img src="" alt="" class="imagendetalle" id="foto">
+        </div>
+
+        <div class="infodetalle">
+            <h2 id="titulo"></h2>
+            <p class="dueño" id="dueño"></p>
+            <p id="descripcion"></p>
+            <h3>Ficha tecnica</h3>
+            <ul class="listamods" id="lista">
+            </ul>
+        </div>
+    </div>
+</main>
+
+<footer >
+
+<div class="footerinfo" id="footer">
+        <h3>Ñeponeta racing team <span>By Lautaro Scanio</span></h3>
+        <p>Pasion por los fierros</p>
+    </div>
+
+    <div class="footerlinks">
+        <a href="#inicio">Inicio</a>
+        <a href="#catalogo">Catalogo</a>
+        <a href="https://tifa.com.ar/intercolegialdomingos-zona-a/" target="_blank">Encontranos</a>
+    </div>
+
+<div class="footerredes">
+    <a href="https://www.instagram.com/neponeta_fc?igsh=bWRieXc2bmVod3o1&utm_source=qr" target="_blank"><img src="imagenes/redes/instagram.png" alt="instagram" class="iconored"></a>
+    <a href=""><img src="imagenes/redes/facebook.png" alt="facebook" class="iconored"></a>
+    <a href=""><img src="imagenes/redes/whatsapp.png" alt="whatsapp" class="iconored"></a>
+</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+    </footer>
+
+
+    <!--esto lo hice con ia para que cada vez que tqoque el boton detalles me muestre la info del auto que toque, lo hice con un objeto que tiene toda la info de cada auto y con js busco el id del auto que toque y lo muestro en el html --> 
+<script>
+    let datos = {
+        "corsa": {
+            img: "imagenes/autos/corsa.jpg",
+            titulo: "Chevrolet Corsa Classic",
+            dueño: "Dueño: Esca",
+            desc: "El corsa, que decir del corsa. Fue el primero, el que tan feliz nos hizo, el que tantas veces nos llevo. Sin duda el que mas aura tiene, el mas rapido, simplemente el pinguino.",
+            mods: "<li>Año: 2004</li><li>Motor: 1.6L 8v</li><li>Escape: Medio silens</li><li>Suspension: Trabajada a medida</li>"
+        },
+        "fox": {
+            img: "imagenes/autos/fox.jpg",
+            titulo: "VW Fox",
+            dueño: "Dueño: Lolo",
+            desc: "El zorrito de Lolo, chiquito, comodo, fachero y rapido, una bala.",
+            mods: "<li>Año: 2010</li><li>Motor: 1.6L 16v</li><li>Escape: Original</li>"
+        },
+        "peugeot206": {
+            img: "imagenes/autos/206.jpg",
+            titulo: "Peugeot 206",
+            dueño: "Dueño: Tato",
+            desc: "El tan esperado 206 de luca, con motor chancho abajo pero en altas revoluciones vuela.",
+            mods: "<li>Año: 2004</li><li>Motor: 1.6L 16v</li><li>Suspensión: Trabajada</li>"
+        },
+        "peugeot208": {
+            img: "imagenes/autos/208.jpeg",
+            titulo: "Peugeot 208",
+            dueño: "Dueño: Nico",
+            desc: "El heredado de nico, el mas fachero (aunque no tiene mucha aura porque es heredado).",
+            mods: "<li>Año: 2016</li><li>Motor: 1.6L 16v</li>"
+        },
+        "etios": {
+            img: "imagenes/autos/etios.webp",
+            titulo: "Toyota Etios",
+            dueño: "Dueño: Santi",
+            desc: "El Etios no se rompe mas. El ideal para ir de a 8 en un auto. Bien lanchita.",
+            mods: "<li>Año: 2021</li><li>Motor: 1.5L 16v</li><li>Estado: Joya nunca taxi</li>"
+        }
+    };
+
+    let parametros = new URLSearchParams(window.location.search);
+    let idAuto = parametros.get("id");
+
+    if (datos[idAuto]) {
+        document.getElementById("foto").src = datos[idAuto].img;
+        document.getElementById("titulo").innerText = datos[idAuto].titulo;
+        document.getElementById("dueño").innerText = datos[idAuto].dueño;
+        document.getElementById("descripcion").innerText = datos[idAuto].desc;
+        document.getElementById("lista").innerHTML = datos[idAuto].mods;
+    }
+</script>
+
+</body>
+</html>
