@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+   
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -11,31 +11,30 @@ body {
 
 .header {
     display: flex;
-    gap: 23em;    
+    justify-content: space-between;    
     align-items: center;
     background-color: #ffffff; 
     padding: 15px 50px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
     position: sticky;
     top: 0;
-
+    z-index: 100;
+    flex-wrap: wrap;
 }
 
 .logo {
     height: 55px;
     width: auto;
-    display: block;
 }
 
 .links {
-    list-style: none;
     display: flex;
     gap: 40px; 
 }
 
 .links a {
     text-decoration: none;
-    color: #333333; 
+    color: #383535; 
     font-weight: 600;
     font-size: 16px;
     text-transform: uppercase; 
@@ -49,33 +48,88 @@ body {
 .hamburguesa-img {
     width: 40px;
     height: 40px;
+    display: none;
+    cursor: pointer;
 }
+
+.menu_celu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.menu_celu a {
+    text-decoration: none;
+    color: #383535;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 15px 25px;
+    border-top: 1px solid #e9e9e9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.menu_celu a:hover {
+    background-color: #ebebeb;
+    color: #3498db;
+}
+
+.menu_abierto {
+    display: flex;
+}
+
 .principal {
     padding: 50px;
     max-width: 1200px;
-    margin: 0 auto;
 }
 
-.seccion-catalogo {
+.catalogo {
     margin-bottom: 40px;
 }
-
 .titulo {
     text-align: center;
-    color: #333;
-    margin-bottom: 40px;
+    color: #383535;
+    margin-bottom: 10px;
     font-size: 30px;
     margin-top: 30px;
 }
 
-.contenedor-tarjetas {
+.titulo h2{
+    text-align: center;
+    color: #383535;
+    margin-bottom: 10px;
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.titulo p {
+    font-weight: 500;
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+.titulo::after { /* esto es para la linea de abajo del titulo lo saque de internet */
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #3498db;
+    margin: 12px auto 30px;
+    border-radius: 2px;
+}
+
+
+.divCards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
 }
 
-.tarjeta {
+.card {
     background-color: white;
     border-radius: 10px;
     width: 300px;
@@ -83,7 +137,7 @@ body {
     transition: box-shadow 0.3s;
 }
 
-.tarjeta:hover {
+.card:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
@@ -123,12 +177,12 @@ body {
 
 footer{
     background-color: #2980b9;  
-    padding: 30px 50px;
+    padding: 30px 0px;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 10em;
+    gap: 30px;
 }
 
 
@@ -228,31 +282,135 @@ footer{
 .listamods li {
     margin-bottom: 10px;
     font-size: 16px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #cfcfcf;
     padding-bottom: 5px;
 }
 
-.titulo-intermedio {
-    text-align: center;
-    color: #333;
-    font-size: 28px;
-    margin-top: 40px;
-    margin-bottom: 30px;
-    text-transform: uppercase;
+
+
+.div_pilotos {
+    padding: 0 40px 40px;
 }
 
-
-.contenedor-foto-grupo {
+.div_foto_chicos {
     display: block;
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s;
+
+    max-width: 700px;
+    max-height: 650px;
+    margin: 0 auto;
+}
+
+.div_foto_chicos:hover {
+    transform: scale(1.01);
+    box-shadow: 10px 15px 15px 10px rgba(0.2,0.2,0,0.2);
+
+}
+
+.foto_pilotos {
+    width: 100%;
+    display: block;
+
 }
 
 
 
-.foto-grupo-grande {
-    width: 50em;
-    height: 10em;
+.listapilotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.piloto {
+    width: 260px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 15px;
+    text-align: center;
+}
+
+.fotopiloto {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%; /* esto centra las fotos*/
+}
+
+.piloto:nth-child(3) .fotopiloto { /* esto ajusta la foto de tato pq estaba descentrada */
+    object-position: center 50%;
+}
+
+.piloto h2 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.piloto h1 {
+    color: #3498db;
+    font-size: 18px;
     display: block;
+    margin-bottom: 15px;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .div_pilotos {
+        padding: 0 16px 30px;
+    }
+
+    .header {
+        padding: 12px 20px;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .hamburguesa-img {
+        display: block;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 20px;
+        gap: 20px;
+    }
+
+    .footerlinks {
+        gap: 15px;
+    }
+
+    .footerredes {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .div_pilotos {
+        padding: 0 10px 20px;
+    }
+
+    .div_foto_chicos {
+        border-radius: 8px;
+    }
+
+    .header {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        height: 40px;
+    }
 }

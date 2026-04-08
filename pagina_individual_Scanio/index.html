@@ -11,20 +11,23 @@
     
 <header class="header"> 
 
-<div class="div-logo">
+<div class="logo">
     <img src="imagenes/header/logo.png" alt="logo" class="logo">
 </div>
 
-<nav class="navbar">
-    <ul class="links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#catalogo">Catalogo</a></li>
-        <li><a href="#footer">Contacto</a></li>
-    </ul>
-</nav>
+<div class="links">
+    <a href="#inicio">Inicio</a>
+    <a href="#catalogo">Catalogo</a>
+    <a href="los_pibes.html">Pilotos</a>
+</div>
 
-        <img src="imagenes/header/hamburguesa.png" alt="" class="hamburguesa-img">
+        <img src="imagenes/header/hamburguesa.png" alt="" class="hamburguesa-img" onclick="document.querySelector('.menu_celu').classList.toggle('menu_abierto')">
 
+<div class="menu_celu">
+    <a href="#inicio">Inicio</a>
+    <a href="#catalogo">Catalogo</a>
+    <a href="los_pibes.html">Pilotos</a>
+</div>
 
 </header>
 
@@ -32,15 +35,15 @@
 
  
 
-    <section class="seccion-catalogo" id="catalogo">
+    <section class="catalogo" id="catalogo">
         
         <h2 class="titulo">Ñeponeta racing team</h2>
         
-        <h2 class="titulo-intermedio">Autos</h2>
+        <h2 class="titulo">Autos</h2>
 
-        <div class="contenedor-tarjetas">
+        <div class="divCards">
             
-            <div class="tarjeta">
+            <div class="card">
                 <img src="imagenes/autos/corsa.jpg" alt="" class="imagenauto">
                 <div class="infoAuto">
                     <h3>Chevrolet Corsa Classic</h3>
@@ -53,7 +56,7 @@
                 </div>
             </div> 
 
-            <div class="tarjeta">
+            <div class="card">
                 <img src="imagenes/autos/fox.jpg" alt="" class="imagenauto">
                 <div class="infoAuto">
                     <h3>VW Fox</h3>
@@ -66,7 +69,7 @@
                 </div>
             </div>
 
-            <div class="tarjeta">
+            <div class="card">
                 <img src="imagenes/autos/206.jpg" alt="" class="imagenauto">
                 <div class="infoAuto">
                     <h3>Peugeot 206</h3>
@@ -79,7 +82,7 @@
                 </div>
             </div>
 
-            <div class="tarjeta">
+            <div class="card">
                 <img src="imagenes/autos/208.jpeg" alt="" class="imagenauto">
                 <div class="infoAuto">
                     <h3>Peugeot 208</h3>
@@ -92,7 +95,7 @@
                 </div>
             </div>
 
-            <div class="tarjeta">
+            <div class="card">
                 <img src="imagenes/autos/etios.webp" alt="" class="imagenauto">
                 <div class="infoAuto">
                     <h3>Toyota Etios</h3>
@@ -106,13 +109,13 @@
             </div>
 
         </div>
-    </section>
-
-        <h2 class="titulo-intermedio">La Banda</h2>
+  <section class="div_pilotos" id="pilotos-bottom">
+        <h2 class="titulo">La Banda</h2>
         
-        <a href="labanda.html" class="contenedor-foto-grupo">
-            <img src="imagenes/pibes.jpeg" alt="Ñeponeta Racing Team" class="foto-grupo-grande">
+        <a href="los_pibes.html" class="div_foto_chicos">
+            <img src="imagenes/pilotos/pibes.jpeg" alt="Ñeponeta Racing Team" class="foto_pilotos">
         </a>
+    </section>
 
 </main>
 
@@ -124,7 +127,7 @@
     </div>
 
     <div class="footerlinks">
-        <a href="#inicio">Inicio</a>
+        <a href="los_pibes.html">Pilotos</a>
         <a href="#catalogo">Catalogo</a>
         <a href="https://tifa.com.ar/intercolegialdomingos-zona-a/" target="_blank">Encontranos</a>
     </div>
@@ -132,7 +135,7 @@
 <div class="footerredes">
     <a href="https://www.instagram.com/neponeta_fc?igsh=bWRieXc2bmVod3o1&utm_source=qr" target="_blank"><img src="imagenes/redes/instagram.png" alt="instagram" class="iconored"></a>
     <a href=""><img src="imagenes/redes/facebook.png" alt="facebook" class="iconored"></a>
-    <a href=""><img src="imagenes/redes/whatsapp.png" alt="whatsapp" class="iconored"></a>
+    <a href="https://chat.whatsapp.com/FWhqffz1XBwIxVEQKzHtoJ" target="_blank"><img src="imagenes/redes/whatsapp.png" alt="whatsapp" class="iconored"></a>
 </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
     </footer>
 
