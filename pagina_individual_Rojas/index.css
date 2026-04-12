@@ -1,0 +1,236 @@
+
+:root {
+    --azul-neponeta: #0a192f;
+    --negro-puro: #050505;
+    --dorado-tri: #c5a021; 
+    --blanco: #ffffff;
+    --gris-card: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--negro-puro);
+    color: var(--blanco);
+    line-height: 1.6;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: var(--azul-neponeta); 
+    padding: 15px 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); 
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--dorado-tri);
+}
+
+.logo-img {
+    height: 50px;
+}
+
+.links {
+    display: flex;
+    gap: 35px; 
+}
+
+.links a {
+    text-decoration: none;
+    color: var(--blanco); 
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase; 
+    transition: 0.3s;
+}
+
+.links a:hover {
+    color: var(--dorado-tri); 
+}
+
+.hamburguesa-img {
+    width: 35px;
+    display: none; 
+    cursor: pointer;
+}
+
+.menu_celu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--azul-neponeta);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-bottom: 2px solid var(--dorado-tri);
+}
+
+.menu_celu a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 25px;
+    border-top: 1px solid #1a1a1a;
+}
+
+.menu_abierto {
+    display: flex;
+}
+
+
+.titulo-seccion {
+    text-align: center;
+    margin-top: 40px;
+    padding: 0 15px;
+}
+
+.titulo-seccion h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.titulo-seccion::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: var(--dorado-tri);
+    margin: 12px auto 35px;
+    border-radius: 2px;
+}
+
+
+.contenedor_pibes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Esto hace que se centren siempre */
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.card_pibe {
+    background-color: var(--gris-card);
+    width: 290px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #222;
+    transition: transform 0.4s ease;
+}
+
+.card_pibe:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(197, 160, 33, 0.25);
+    border-color: var(--dorado-tri);
+}
+
+.foto_pibe {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--dorado-tri);
+    margin-bottom: 15px;
+}
+
+.puesto {
+    color: var(--dorado-tri);
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--dorado-tri);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.hito {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+}
+
+.hito::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background-color: var(--negro-puro);
+    border: 4px solid var(--dorado-tri);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.izquierda { left: 0; text-align: right; }
+.derecha { left: 50%; }
+.derecha::after { left: -10px; }
+
+.contenido-hito {
+    padding: 20px;
+    background-color: var(--gris-card);
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+.contenido-hito h3 {
+    color: var(--dorado-tri);
+    margin-bottom: 10px;
+}
+
+
+footer {
+    background-color: #030812;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 3px solid var(--dorado-tri);
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.footerinfo h3 { font-size: 22px; }
+.footerinfo span { display: block; font-size: 14px; color: #888; font-style: italic; }
+.footerlinks { display: flex; gap: 25px; }
+.footerlinks a { color: white; text-decoration: none; font-weight: 600; }
+.iconored { width: 35px; margin: 0 10px; }
+
+
+@media (max-width: 768px) {
+    .links { display: none; }
+    .hamburguesa-img { display: block; }
+    footer { flex-direction: column; text-align: center; }
+    .timeline::after { left: 31px; }
+    .hito { width: 100%; padding-left: 70px; padding-right: 25px; text-align: left; }
+    .hito::after { left: 21px; }
+    .derecha { left: 0%; }
+}
