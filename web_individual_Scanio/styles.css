@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+:root {
+    --colorfondo: #0d0d0d;
+    --colortexto: #f0f0f0;
+    --colorvioleta: #9d4edd;
+    --colorgris: #1a1a1a;
+    --fuenteprincipal: 'Space Grotesk', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fuenteprincipal);
+}
+
+body {
+    background-color: var(--colorfondo);
+    color: var(--colortexto);
+}
+
+
+#cabecera {
+    background-color: var(--colorfondo);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid var(--colorvioleta);
+}
+
+.logoportfolio img {
+    max-width: 100%;
+    height: auto;
+    width: 150px;
+}
+
+.navegacion ul {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+}
+
+.navegacion a {
+    color: var(--colortexto);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navegacion a:hover {
+    color: var(--colorvioleta);
+}
+
+.seccioninicio {
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+}
+
+.textoinicio h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.textoinicio h2 {
+    font-size: 24px;
+    color: var(--colorvioleta);
+    margin-bottom: 20px;
+}
+
+.textoinicio p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #cccccc;
+}
+
+.botonesinicio {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.botonprimario {
+    background-color: var(--colorvioleta);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.botonprimario:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(157, 78, 221, 0.6);
+}
+
+.botonsecundario {
+    background-color: transparent;
+    color: var(--colorvioleta);
+    border: 2px solid var(--colorvioleta);
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.botonsecundario:hover {
+    background-color: var(--colorvioleta);
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(157, 78, 221, 0.6);
+}
+
+.fotoperfil {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 100% 0%; /* mueve la imagen más a la derecha dentro del círculo */
+    border: 3px solid var(--colorvioleta);
+    box-shadow: 0 0 25px rgba(157, 78, 221, 0.5);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.seccionhabilidades {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.titulohabilidades {
+    font-size: 32px;
+    color: var(--colorvioleta);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contenedorhabilidades {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.tarjetaskill {
+    background: rgba(26, 26, 26, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(157, 78, 221, 0.2);
+    border-radius: 15px;
+    padding: 40px;
+    width: 100%;
+    max-width: 350px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tarjetaskill:hover {
+    transform: scale(1.05);
+    border: 1px solid var(--colorvioleta);
+    box-shadow: 0 0 30px rgba(157, 78, 221, 0.3);
+}
+
+
+
+.tarjetaskill h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.listaskills {
+    list-style: none;
+    text-align: left;
+}
+
+.listaskills li {
+    padding: 8px 0;
+    color: #bbbbbb;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.listaskills li::before {
+    margin-right: 10px;
+    color: var(--colorvioleta);
+}
+
+@media (min-width: 768px) {
+    .contenedorhabilidades {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0 10%;
+    }
+
+    .tarjetaskill {
+        height: 450px;
+    }
+}
+
+@media (min-width: 768px) {
+    #cabecera {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 10%;
+    }
+
+    .logoportfolio {
+        margin-bottom: 0;
+    }
+
+    .seccioninicio {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+        padding: 100px 10%;
+    }
+
+    .textoinicio {
+        max-width: 50%;
+    }
+
+    .botonesinicio {
+        flex-direction: row;
+    }
+
+    .imageninicio {
+        display: flex;
+        justify-content: flex-end;
+        width: 40%;
+    }
+}
