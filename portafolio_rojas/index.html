@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luciano Rojas — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="cabecera">
+    <div class="cabecera__contenedor">
+      <a href="#" class="cabecera__logo">
+        <i class="fa-solid fa-code"></i>
+      </a>
+      <nav class="cabecera__nav">
+        <ul class="cabecera__lista-nav">
+          <li><a href="#inicio" class="cabecera__enlace-nav">Inicio</a></li>
+          <li><a href="#sobre-mi" class="cabecera__enlace-nav">Sobre mí</a></li>
+          <li><a href="#servicios" class="cabecera__enlace-nav">Servicios</a></li>
+          <li><a href="#contacto" class="cabecera__enlace-nav">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="inicio" class="inicio">
+      <div class="inicio__contenedor">
+        <div class="inicio__texto">
+          <span class="inicio__subtitulo">Hola, mi nombre es</span>
+          <h1 class="inicio__titulo">LUCIANO ROJAS</h1>
+          <span class="inicio__rol">BackEnd Developer</span>
+          <p class="inicio__descripcion">Me especializo en la lógica detrás de las aplicaciones, desarrollando arquitecturas sólidas y escalables que impulsan productos digitales de alto rendimiento.</p>
+          <a href="mailto:alumno26.rojas.luciano@ipm.edu.ar" class="boton boton--principal">Contáctame</a>
+        </div>
+        <div class="inicio__foto-contenedor">
+          <div class="inicio__foto-decoracion"></div>
+          <div class="inicio__foto"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="sobre-mi">
+      <div class="sobre-mi__contenedor">
+        <div class="sobre-mi__foto-contenedor animar">
+          <div class="sobre-mi__foto-decoracion"></div>
+          <div class="sobre-mi__foto"></div>
+        </div>
+        <div class="sobre-mi__contenido animar">
+          <span class="etiqueta-seccion">&#9654; Sobre mí</span>
+          <h2 class="titulo-seccion">Quién soy</h2>
+          <p class="texto-seccion">Soy un desarrollador enfocado en programar backend y APIs. Me apasiona resolver problemas complejos y construir sistemas robustos. Estudié en un colegio técnico, el Instituto Politécnico Modelo, lo que me dio una gran base para el pensamiento lógico y analítico que aplico a diario en cada proyecto.</p>
+          <div class="sobre-mi__etiquetas">
+            <span class="insignia"><i class="fa-brands fa-python"></i> Python</span>
+            <span class="insignia"><i class="fa-solid fa-leaf"></i> Spring Boot</span>
+            <span class="insignia"><i class="fa-brands fa-java"></i> Java</span>
+            <span class="insignia"><i class="fa-solid fa-database"></i> SQL</span>
+            <span class="insignia"><i class="fa-brands fa-react"></i> React</span>
+            <span class="insignia"><i class="fa-brands fa-figma"></i> Figma</span>
+          </div>
+          <a href="#" class="boton boton--principal">Descargar CV</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios" class="servicios">
+      <div class="servicios__encabezado animar">
+        <span class="etiqueta-seccion">&#9654; Mis servicios</span>
+        <h2 class="titulo-seccion">Qué puedo hacer</h2>
+      </div>
+      <div class="servicios__grilla">
+        <article class="tarjeta animar">
+          <i class="fa-solid fa-server tarjeta__icono"></i>
+          <h3 class="tarjeta__titulo">Backend Development</h3>
+          <p class="tarjeta__texto">Construcción de servidores y lógica de negocio robusta con arquitecturas limpias y escalables.</p>
+        </article>
+        <article class="tarjeta animar">
+          <i class="fa-solid fa-globe tarjeta__icono"></i>
+          <h3 class="tarjeta__titulo">Web Development</h3>
+          <p class="tarjeta__texto">Desarrollo de aplicaciones web completas, desde el servidor hasta la interfaz del usuario.</p>
+        </article>
+        <article class="tarjeta animar">
+          <i class="fa-solid fa-database tarjeta__icono"></i>
+          <h3 class="tarjeta__titulo">Bases de Datos</h3>
+          <p class="tarjeta__texto">Diseño, optimización y administración de bases de datos relacionales y consultas SQL.</p>
+        </article>
+        <article class="tarjeta animar">
+          <i class="fa-solid fa-display tarjeta__icono"></i>
+          <h3 class="tarjeta__titulo">User Interfaces</h3>
+          <p class="tarjeta__texto">Creación de interfaces intuitivas y accesibles centradas en la experiencia del usuario.</p>
+        </article>
+        <article class="tarjeta animar">
+          <i class="fa-solid fa-plug tarjeta__icono"></i>
+          <h3 class="tarjeta__titulo">Integración con APIs</h3>
+          <p class="tarjeta__texto">Conexión e integración de servicios externos mediante APIs RESTful seguras y eficientes.</p>
+        </article>
+        <article class="tarjeta animar">
+          <i class="fa-brands fa-react tarjeta__icono"></i>
+          <h3 class="tarjeta__titulo">Desarrollo con React</h3>
+          <p class="tarjeta__texto">Interfaces dinámicas y reactivas construidas con componentes reutilizables en React.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto" class="llamada">
+      <div class="llamada__contenedor animar">
+        <div class="llamada__texto">
+          <h2 class="llamada__titulo">Trabajemos juntos en tu próximo proyecto</h2>
+          <p class="texto-seccion">¿Tenés un proyecto en mente? Me encantaría conocerlo. Construyamos algo juntos.</p>
+        </div>
+        <a href="mailto:alumno26.rojas.luciano@ipm.edu.ar" class="boton boton--principal boton--grande">Contacto</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="pie__contenedor">
+      <a href="#" class="pie__logo">
+        <i class="fa-solid fa-code"></i>
+      </a>
+      <div class="pie__redes">
+        <a href="https://github.com/lulorojas" class="pie__enlace-red" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://github.com/lulorojas" class="pie__enlace-red" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
