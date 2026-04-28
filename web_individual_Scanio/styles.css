@@ -20,7 +20,7 @@ body {
 }
 
 
-#cabecera {
+#header {
     background-color: var(--colorfondo);
     padding: 20px;
     display: flex;
@@ -126,7 +126,7 @@ body {
     border: 3px solid var(--colorvioleta);
     box-shadow: 0 0 25px rgba(157, 78, 221, 0.5);
     display: block;
-    margin-left: auto;
+    margin-left: 170px;
     margin-right: auto;
 }
 
@@ -146,7 +146,7 @@ body {
 .contenedorhabilidades {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
     align-items: center;
 }
 
@@ -157,18 +157,16 @@ body {
     border-radius: 15px;
     padding: 40px;
     width: 100%;
-    max-width: 350px;
+    max-width: 300px;
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
 }
 
 .tarjetaskill:hover {
-    transform: scale(1.05);
     border: 1px solid var(--colorvioleta);
     box-shadow: 0 0 30px rgba(157, 78, 221, 0.3);
 }
-
 
 
 .tarjetaskill h3 {
@@ -193,6 +191,158 @@ body {
     color: var(--colorvioleta);
 }
 
+
+.proyectosdetalle {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.subtituloproyectos {
+    color: #aaaaaa;
+    margin-bottom: 50px;
+}
+
+.gridproyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+.tarjetaproyecto {
+    background-color: #121212; /* Un gris casi negro más pro */
+    border: 1px solid #222;
+    border-radius: 4px; /* Menos redondeado para estilo técnico */
+    padding: 30px;
+    text-align: left;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tarjetaproyecto:hover {
+    border-color: var(--colorvioleta);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(157, 78, 221, 0.15);
+}
+
+.headerproyecto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.foldericono {
+    font-size: 32px;
+    color: var(--colorvioleta);
+}
+
+.linksrepositorio a {
+    color: var(--colortexto);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #444;
+    padding: 5px 12px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.linksrepositorio a:hover {
+    background-color: var(--colorvioleta);
+    border-color: var(--colorvioleta);
+}
+
+.tarjetaproyecto h3 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.tarjetaproyecto p {
+    font-size: 14px;
+    color: #888;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.tagsproyecto {
+    margin-top: auto;
+    display: flex;
+    gap: 12px;
+}
+
+.tagsproyecto span {
+    font-family: 'Courier New', Courier, monospace; /* Fuente de código */
+    font-size: 12px;
+    color: var(--colorvioleta);
+}
+
+/* Efecto de línea de color arriba de cada tarjeta */
+.tarjetaproyecto::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--colorvioleta);
+    transition: 0.4s;
+}
+
+.tarjetaproyecto:hover::before {
+    width: 100%;
+}
+
+/* Magia del Efecto Spotlight */
+.tarjetaproyecto {
+    /* Nos aseguramos de que el brillo no se salga de la tarjeta */
+    position: relative;
+    z-index: 1;
+}
+
+.tarjetaproyecto::before {
+    /* Esta es la luz de la linterna (usamos el violeta en rgb) */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        800px circle at var(--x) var(--y), 
+        rgba(157, 78, 221, 0.15), /* Color del brillo */
+        transparent 40%
+    );
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: inherit; /* Respeta los bordes de tu tarjeta */
+}
+
+/* La luz solo se prende cuando pasás el mouse */
+.tarjetaproyecto:hover::before {
+    opacity: 1;
+}
+
+@media (min-width: 768px) {
+    .gridproyectos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .gridproyectos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
 @media (min-width: 768px) {
     .contenedorhabilidades {
         flex-direction: row;
@@ -207,7 +357,7 @@ body {
 }
 
 @media (min-width: 768px) {
-    #cabecera {
+    #header {
         flex-direction: row;
         justify-content: space-between;
         padding: 20px 10%;
